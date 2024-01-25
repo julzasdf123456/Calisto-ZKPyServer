@@ -2,7 +2,6 @@ from flask import Flask, jsonify, request
 from datetime import datetime
 from zk import ZK, const
 
-conn = None
 
 app = Flask(__name__)
 
@@ -15,6 +14,7 @@ def test():
 # GET USERS
 @app.route('/get-users', methods=['GET'])
 def get_users() :
+    conn = None
     ipaddress = request.args.get('Ip')
     zk = ZK(ipaddress, port=4370, timeout=360, password=0, force_udp=False, ommit_ping=False)
     try:
@@ -53,7 +53,8 @@ def get_users() :
 
 # GET ATTENDANCE DATA
 @app.route('/get-attendance', methods=['GET'])
-def get_attendace() :
+def get_attendace() :    
+    conn = None
     ipaddress = request.args.get('Ip')
     zk = ZK(ipaddress, port=4370, timeout=360, password=0, force_udp=False, ommit_ping=False)
     try:
