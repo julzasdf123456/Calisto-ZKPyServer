@@ -104,4 +104,4 @@ def get_attendace() :
 
 
 if __name__ == '__main__':
-    app.run(host='192.168.12.200', port=5000, debug=True)
+    app.run(host='192.168.13.155', port=5000, debug=True)
