@@ -25,19 +25,6 @@ def get_users() :
         # another commands will be here!
 
         # Example: Get All Users
-        # users = conn.get_users()
-        # for user in users:
-        #     privilege = 'User'
-        #     if user.privilege == const.USER_ADMIN:
-        #         privilege = 'Admin'
-        #     print ('+ UID #{}'.format(user.uid))
-        #     print ('  Name       : {}'.format(user.name))
-        #     print ('  Privilege  : {}'.format(privilege))
-        #     print ('  Password   : {}'.format(user.password))
-        #     print ('  Group ID   : {}'.format(user.group_id))
-        #     print ('  User  ID   : {}'.format(user.user_id))
-
-        # GET ATTENDANCE
         userList = []
         users = conn.get_users()
 
